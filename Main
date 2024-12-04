@@ -1,0 +1,10 @@
+from Controller import Controller
+
+if __name__ == "__main__":
+    # Fil stigerne er lavet til at være i selve projektmappen. Hvis du vil lave andre stier, så skal disse opdateres. 
+    file_path_gri = "./out/GRI_2017_2020.xlsx"
+    destination_folder = "./out/files"
+    output_folder = "./out"
+    #initialisere og starter controlleren, med de ovenstående værdier.
+    controller = Controller(file_path_gri, destination_folder, output_folder)
+    controller.start()

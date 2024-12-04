@@ -1,0 +1,34 @@
+@startuml diagram
+
+class Controller {
+    - file_path_gri : String
+    - destination_folder : String
+    - output_folder : String
+    - file_handler : FileHandler
+
+    + __init__(file_path_gri, destination_folder, output_folder)
+    + start()
+}
+
+class Downloader {
+    - destination_folder : String
+
+    + __init__(destination_folder)
+    + download(url : String, destination_filename : String) : Boolean
+}
+
+class FileHandler {
+    - file_path_gri : String
+    - downloader : Downloader
+    - success_list : List
+    - output_folder : String
+
+    + __init__(file_path_gri, destination_folder, output_folder)
+    + start_download()
+    + write_downloaded_files(log_list : List)
+}
+
+Controller --> FileHandler : uses
+FileHandler --> Downloader : uses
+
+@enduml
