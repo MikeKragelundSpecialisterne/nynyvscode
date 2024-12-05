@@ -1,4 +1,4 @@
-name: Best Test in the West. 
+name: Best Test In The West
 
 on:
   push:
@@ -15,16 +15,16 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.12'
+        python-version: '3.10'
 
     - name: Install dependencies
       run: |
-        python -m venv .venv
-        . .venv/bin/activate
+        python -m venv venv
+        source venv/bin/activate .venv/bin/activate
         pip install --upgrade pip
         pip install -r requirements.txt
 
     - name: Run unit tests
       run: |
-        . .venv/bin/activate
+        source venv/bin/activate
         pytest tests/ --disable-warnings -v
