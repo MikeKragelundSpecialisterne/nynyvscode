@@ -3,7 +3,7 @@ name: Best Test in the West
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
   test:
     runs-on: ubuntu-latest
