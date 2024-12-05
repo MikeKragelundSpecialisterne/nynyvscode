@@ -9,7 +9,7 @@ from unittest.mock import patch
 import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from ..File_handler import FileHandler
+from File_handler import FileHandler
 
 class TestFileHandler(unittest.TestCase):
     @patch('polars.read_excel')
