@@ -1,4 +1,4 @@
-name: The best for the test, in the west. 
+name: Best Test in the West. 
 
 on:
   push:
@@ -24,11 +24,11 @@ jobs:
     - name: Install dependencies
       run: |
         python -m venv .venv
-        source .venv/bin/activate
+        . .venv/bin/activate
         pip install --upgrade pip
         pip install -r requirements.txt
 
     - name: Run unit tests
       run: |
-        source .venv/bin/activate
+        . .venv/bin/activate
         pytest tests/ --disable-warnings -v
