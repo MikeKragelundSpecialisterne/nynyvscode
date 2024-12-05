@@ -17,7 +17,7 @@ class FileHandler:
     def start_download(self):
     # Indlæser URL fra GRI filen.
         df = pl.read_excel(self.file_path_gri, columns=["BRnum", "Pdf_URL", "Report Html Address"])
-    
+    #Test
         print(df.head())  # Her printer jeg nogle rows, det var til debugging, men lod den være for at visualisere data. 
         urls = []
         count = 0
